@@ -796,6 +796,25 @@ export const PIZZA_MEMECOIN_TOKEN_BASE_ONLY: Token = {
   additionalWarning: null,
 }
 
+const DWB_MEMECOIN_ASSET_ID_BASE_MAINNET = 'b0495abe70851d43d8444f785daa4fb2aaa8dae6312d596ee318d2b5834cc987'
+const DWB_MEMECOIN_ADDRESS_BASE_MAINNET = '0xc65151ac284f43A51F0A843F6A46930EfF0076c5'
+
+export const DWB_MEMECOIN_TOKEN_BASE_ONLY: Token = {
+  symbol: 'DWB',
+  getSpecificSymbol: makeCoinsetNativeToken('DWB'),
+  sourceNetworkType: NetworkType.COINSET,
+  supported: [
+    {
+      evmNetworkId: BASE_NETWORK.id,
+      coinsetNetworkId: CHIA_NETWORK.id,
+      assetId: DWB_MEMECOIN_ASSET_ID_BASE_MAINNET,
+      contractAddress: DWB_MEMECOIN_ADDRESS_BASE_MAINNET
+    },
+  ],
+  memecoin: true,
+  additionalWarning: null,
+}
+
 export const TOKENS = TESTNET ? [
   ETH_TOKEN,
   USDT_TOKEN,
